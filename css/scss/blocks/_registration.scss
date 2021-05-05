@@ -1,0 +1,179 @@
+.registration {
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    &__label {
+        display: flex;
+        flex-direction: column;
+        color: #222;
+        @include fonts($f_size_16, $l_height_19);
+        font-weight: 300;
+        &-radio {
+            cursor: pointer;
+            margin-right: 20px;
+            &>input {
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+            }
+            &>span {
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+                color: #000;
+                font-weight: 400;
+                text-transform: capitalize;
+                @include fonts($f_size_11, $l_height_13);
+            }
+            &>span::before {
+                content: '';
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                flex-shrink: 0;
+                flex-grow: 0;
+                border: 1px solid #adb5bd;
+                border-radius: 50%;
+                margin-right: 0.5em;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 50% 50%;
+            }
+            &>input:not(:disabled):not(:checked)+span:hover::before {
+                border-color: $main-color;
+            }
+            &>input:not(:disabled):active+span::before {
+                background-color: $main-color;
+                border-color: $main-color;
+            }
+            &>input:focus+span::before {
+                box-shadow: $shadow;
+            }
+            &>input:focus:not(:checked)+span::before {
+                border-color: $main-color;
+            }
+            &>input:checked+span::before {
+                border-color: $main-color;
+                background-color: $main-color;
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+            }
+            &>input:disabled+span::before {
+                background-color: #e9ecef;
+            }
+        }
+    }
+    &-radio {
+        &-wrap {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+    &__input {
+        padding: 13px 17px;
+        margin-bottom: 20px;
+        font-family: 'Lato', sans-serif;
+        @include fonts($f_size_13, $l_height_16);
+        color: #222;
+        font-weight: 300;
+        &:first-child {
+            margin-top: 20px;
+        }
+        &::placeholder {
+            font-family: 'Lato', sans-serif;
+            @include fonts($f_size_13, $l_height_16);
+            color: #B1B1B1;
+            font-weight: 300;
+        }
+    }
+    &__text {
+        color: #B1B1B1;
+        @include fonts($f_size_13, $l_height_16);
+        margin-bottom: 40px;
+    }
+    &__btn {
+        align-self: flex-start;
+        background: $main-color;
+        color: #fff;
+        border: 1px solid transparent;
+        padding: 16px 29px;
+        text-transform: uppercase;
+        transition: $transition-speed;
+        cursor: pointer;
+        &:hover,
+        &:hover .registration__btn-arrow {
+            fill: $main-color;
+            color: $main-color;
+            background: #fff;
+        }
+        &:hover {
+            border: 1px solid $main-color;
+        }
+        &-arrow {
+            fill: #fff;
+            margin-left: 20px;
+            transition: $transition-speed;
+        }
+    }
+}
+
+.loyalty {
+    &__title {
+        text-transform: uppercase;
+        @include fonts($f_size_16, $l_height_19);
+        color: #000;
+        font-weight: 300;
+        margin-bottom: 30px;
+    }
+    &__text {
+        @include fonts($f_size_16, $l_height_19);
+        color: #000;
+        font-weight: 300;
+    }
+    &-list {
+        list-style-image: url('../img/registration/check.svg');
+        padding: 20px 0 100px 40px;
+    }
+    &__item {
+        @include fonts($f_size_16, $l_height_19);
+        color: #000;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .registration {
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-wrap {
+            margin-right: 20px;
+        }
+    }
+    .loyalty {
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .registration {
+        &-wrap {
+            margin-right: 130px;
+        }
+    }
+    .loyalty {
+        &__title {
+            @include fonts($f_size_24, $l_height_29);
+        }
+        &__text {
+            @include fonts($f_size_24, $l_height_29);
+        }
+        &__item {
+            @include fonts($f_size_24, $l_height_29);
+        }
+    }
+}
