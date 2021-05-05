@@ -31,6 +31,18 @@ ul, li {
 }
 button {
     margin: 0;
+    padding: 0;
+}
+::-webkit-details-marker {display: none;}
+summary {
+    display: block;
+    &:focus {
+      outline: none;
+    }
+}
+details[open] summary ~ * {
+    animation: fadeIn  $transition-speed ease-in;
+    -webkit-animation: fadeIn  $transition-speed ease-in;
 }
 .container {
     max-width: 1140px;
@@ -38,5 +50,14 @@ button {
     padding: 0 8px;
     @media (min-width: 768px) {
         padding: 0 15px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }

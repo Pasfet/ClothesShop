@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Catalog</title>
     <link rel="shortcut icon" href="img/header/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
@@ -82,74 +82,215 @@
         </nav>
     </header>
     <main>
-        <section class="promo">
-            <div class="container promo-wrap">
-                <h1 class="promo-heading">
-                    <span class="promo-heading_black">the brand</span> <br> of luxerious <span class="promo-heading_accent">fashion</span>
-                </h1>
+        <section class="breadcrumb">
+            <div class="container breadcrumb-wrap">
+                <h2 class="breadcrumb__heading">new arrivals</h2>
+                <ul class="breadcrumb-list">
+                    <li class="breadcrumb-list__item"><a href="index.html" class="breadcrumb__item">home</a></li>
+                    <li class="breadcrumb-list__item"><a href="#" class="breadcrumb__item">men</a></li>
+                    <li class="breadcrumb-list__item"><a href="#" class="breadcrumb__item">new arrivals</a></li>
+                </ul>
             </div>
         </section>
-        <section class="offer">
-            <div class="container">
-                <div class="offer-wrap">
-                    <div class="offer-card">
-                        <a href="#">
-                            <div class="offer__img-wrap">
-                                <img class="offer__img" src="img/offer/for-women.jpg" alt="for women">
-                                <div class="offer-overlay">
-                                    <p class="offer__text">30% off</p>
-                                    <h4 class="offer__accent">for women</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="offer-card">
-                        <a href="#">
-                            <div class="offer__img-wrap">
-                                <img class="offer__img" src="img/offer/for-men.jpg" alt="for men">
-                                <div class="offer-overlay">
-                                    <p class="offer__text">hot deal</p>
-                                    <h4 class="offer__accent">for men</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="offer-card">
-                        <a href="#">
-                            <div class="offer__img-wrap">
-                                <img class="offer__img" src="img/offer/for-kids.jpg" alt="for kids">
-                                <div class="offer-overlay">
-                                    <p class="offer__text">new arrivals</p>
-                                    <h4 class="offer__accent">for kids</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="offer-card offer__acces">
-                        <a href="#">
-                            <div class="offer__img-wrap offer__img-acces">
-                                <picture class="offer__img">
-                                    <source media="(max-width: 767px)" srcset="img/offer/acces-mob.jpg">
-                                    <img class="offer__img_last" src="img/offer/acces.jpg" alt="">
-                                </picture>
-                                <div class="offer-overlay">
-                                    <p class="offer__text">luxirous & trendy</p>
-                                    <h4 class="offer__accent">accesories</h4>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+        <div class="filter">
+            <div class="container filter-wrap">
+                <div class="filter-inner">
+                    <details class="filter__img-details">
+                        <summary class="filter__img-wrap">
+                            <span class="filter__heading">filter</span>
+                            <svg class="filter__img" width="38" height="25" viewBox="0 0 38 25"  xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.08333 25H10.4167C11.5625 25 12.5 24.0625 12.5 22.9167C12.5 21.7708 11.5625 20.8333 10.4167 20.8333H2.08333C0.9375 20.8333 0 21.7708 0 22.9167C0 24.0625 0.9375 25 2.08333 25ZM0 2.08333C0 3.22917 0.9375 4.16667 2.08333 4.16667H35.4167C36.5625 4.16667 37.5 3.22917 37.5 2.08333C37.5 0.9375 36.5625 0 35.4167 0H2.08333C0.9375 0 0 0.9375 0 2.08333ZM2.08333 14.5833H22.9167C24.0625 14.5833 25 13.6458 25 12.5C25 11.3542 24.0625 10.4167 22.9167 10.4167H2.08333C0.9375 10.4167 0 11.3542 0 12.5C0 13.6458 0.9375 14.5833 2.08333 14.5833Z" />
+                            </svg>
+                        </summary>
+                        <nav class="filter__details-wrap">
+                            <ul class="filter-details">
+                                <li class="filter-details__item">
+                                    <details class="filter-list__inner">
+                                        <summary class="filter__title">
+                                            category
+                                        </summary>
+                                        <ul class="filter-list">
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Accessories</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Bags</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Denim</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Hoodies & Sweatshirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Jackets & Coats</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Polos</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shoes</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Sweaters & Knits</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">T-Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Tanks</button>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="filter-details__item">
+                                    <details class="filter-list__inner">
+                                        <summary class="filter__title">
+                                            brand
+                                        </summary>
+                                        <ul class="filter-list">
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Accessories</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Bags</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Denim</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Hoodies & Sweatshirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Jackets & Coats</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Polos</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shoes</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Sweaters & Knits</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">T-Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Tanks</button>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                                <li class="filter-details__item">
+                                    <details class="filter-list__inner">
+                                        <summary class="filter__title">
+                                            designer
+                                        </summary>
+                                        <ul class="filter-list">
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Accessories</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Bags</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Denim</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Hoodies & Sweatshirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Jackets & Coats</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Polos</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Shoes</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Sweaters & Knits</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">T-Shirts</button>
+                                            </li>
+                                            <li class="filter__item">
+                                                <button class="filter__item-btn">Tanks</button>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </li>
+                            </ul>
+                        </nav>
+                    </details>
+                </div>
+                <div class="sorting">
+                    <details>
+                        <summary>
+                            <span class="sorting__title">trending now
+                                <img class="sorting__arrow" src="img/catalog/arrow-down.svg" alt="down">
+                            </span>
+                        </summary>
+                    </details>
+                    <details class="size__details">
+                        <summary>
+                            <span class="sorting__title">size
+                                <img class="sorting__arrow" src="img/catalog/arrow-down.svg" alt="down">
+                            </span>
+                        </summary>
+                        <ul class="size-change">
+                            <li class="size-check">
+                                <label class="size-inner">
+                                    <input type="checkbox">
+                                    <span class="size__text">xs</span>
+                                </label>
+                            </li>
+                            <li class="size-check">
+                                <label class="size-inner">
+                                    <input type="checkbox">
+                                    <span class="size__text">s</span>
+                                </label>
+                            </li>
+                            <li class="size-check">
+                                <label class="size-inner">
+                                    <input type="checkbox">
+                                    <span class="size__text">m</span>
+                                </label>
+                            </li>
+                            <li class="size-check">
+                                <label class="size-inner">
+                                    <input type="checkbox">
+                                    <span class="size__text">l</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            <span class="sorting__title">price
+                                <img class="sorting__arrow" src="img/catalog/arrow-down.svg" alt="down">
+                            </span>
+                        </summary>
+                    </details>
                 </div>
             </div>
-        </section>
-        <section class="main-cards">
+        </div>
+        <div class="catalog-cards">
             <div class="container">
-                <h2 class="main-cards__heading">Fetured Items</h2>
-                <p class="main-cards__text">Shop for items based on what we featured in this week</p>
                 <div class="main-cards-wrap">
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-1.jpg" alt="card-1">
+                            <img class="card__img" src="img/catalog/product-1.jpg" alt="card-1">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -167,7 +308,7 @@
                     </div>
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-2.jpg" alt="card-2">
+                            <img class="card__img" src="img/catalog/product-2.jpg" alt="card-2">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -185,7 +326,7 @@
                     </div>
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-3.jpg" alt="card-3">
+                            <img class="card__img" src="img/catalog/product-3.jpg" alt="card-3">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -203,7 +344,7 @@
                     </div>
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-4.jpg" alt="card-4">
+                            <img class="card__img" src="img/catalog/product-4.jpg" alt="card-4">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -221,7 +362,7 @@
                     </div>
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-5.jpg" alt="card-5">
+                            <img class="card__img" src="img/catalog/product-5.jpg" alt="card-5">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -239,7 +380,61 @@
                     </div>
                     <div class="card main-cards_center">
                         <div class="card__img-wrap">
-                            <img class="card__img" src="img/cards/card-6.jpg" alt="card-6">
+                            <img class="card__img" src="img/catalog/product-6.jpg" alt="card-6">
+                            <div class="card-overlay">
+                                <button class="card-btn">
+                                    <img class="card-btn__img" src="img/header/cart.svg" alt="add">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <h4 class="card-content__heading">ellery x m'o capsule</h4>
+                            </a>
+                            <p class="card-content__desc">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <span class="card-content__price">$52.00</span>
+                        </div>
+                    </div>
+                    <div class="card main-cards_center">
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="img/catalog/product-7.jpg" alt="card-7">
+                            <div class="card-overlay">
+                                <button class="card-btn">
+                                    <img class="card-btn__img" src="img/header/cart.svg" alt="add">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <h4 class="card-content__heading">ellery x m'o capsule</h4>
+                            </a>
+                            <p class="card-content__desc">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <span class="card-content__price">$52.00</span>
+                        </div>
+                    </div>
+                    <div class="card main-cards_center">
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="img/catalog/product-8.jpg" alt="card-8">
+                            <div class="card-overlay">
+                                <button class="card-btn">
+                                    <img class="card-btn__img" src="img/header/cart.svg" alt="add">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <h4 class="card-content__heading">ellery x m'o capsule</h4>
+                            </a>
+                            <p class="card-content__desc">Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <span class="card-content__price">$52.00</span>
+                        </div>
+                    </div>
+                    <div class="card main-cards_center">
+                        <div class="card__img-wrap">
+                            <img class="card__img" src="img/catalog/product-9.jpg" alt="card-9">
                             <div class="card-overlay">
                                 <button class="card-btn">
                                     <img class="card-btn__img" src="img/header/cart.svg" alt="add">
@@ -256,11 +451,35 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn main-cards__btn" href="catalog.html">
-                    Browse All Product
-                </a>
+                <div class="pagination">
+                    <ul class="pagination-list">
+                        <li class="pagination__btn">
+                            <svg class="chevron-left" width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M8.99512 2L3.99512 7L8.99512 12L7.99512 14L0.995117 7L7.99512 0L8.99512 2Z" />
+                            </svg>
+                        </li>
+                        <li class="pagination__numbers pagination-active">
+                            <a href="#">1</a>
+                        </li>
+                        <li class="pagination__numbers active"><a href="#">2</a></li>
+                        <li class="pagination__numbers"><a href="#">3</a></li>
+                        <li class="pagination__numbers"><a href="#">4</a></li>
+                        <li class="pagination__numbers"><a href="#">5</a></li>
+                        <li class="pagination__numbers mr-none"><a href="#">6</a></li>
+                        <li class="pagination__dots"><a href="#">.....</a></li>
+                        <li class="pagination__numbers mr-none"><a href="#">20</a></li>
+                        <li class="pagination__btn">
+                            <svg class="chevron-right" width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.994995 12L5.995 7L0.994995 2L1.995 0L8.995 7L1.995 14L0.994995 12Z" />
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
     <aside class="feature">
         <div class="container">
