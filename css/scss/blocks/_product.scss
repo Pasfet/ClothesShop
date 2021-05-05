@@ -1,0 +1,186 @@
+.product {
+    &-slider {
+        background-color: #F7F7F7;
+        height: 624px;
+        border-top: 1px solid #EAEAEA;
+        border-bottom: 1px solid #EAEAEA;
+        padding: 85px 0;
+        padding-bottom: $slider-height-bottom;
+        &__img {
+            width: inherit;
+            transition: $transition-speed;
+            &-wrap { 
+                width: 374px;
+                margin: 0 auto;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0;
+  }
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+}
+.swiper-button-next, .swiper-button-prev {
+    background: rgba(42, 42, 42, 0.15);
+    top: 14%;
+    width: 47px;
+    height: 47px;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: none;
+}
+.swiper-button-next:hover .swiper-button-arrow,
+.swiper-button-prev:hover .swiper-button-arrow {
+  fill: $main-color;
+}
+
+
+.specification {
+    &-wrap {
+        padding: 64px 25px;
+        text-align: center;
+        background-color: #fff;
+    }
+    &-about {
+        font-weight: 300;
+        &__border {
+            width: 174px;
+            height: 1px;
+            background-color: #EAEAEA;
+            margin: 30px auto 50px;
+        }
+    }
+    &__collection {
+        text-transform: uppercase;
+        color: $main-color;
+        @include fonts($f_size_14, $l_height_17);
+        &-border {
+            width: 63px;
+            height: 3px;
+            background-color: $main-color;
+            margin: 12px auto;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 300;
+        @include fonts($f_size_18, $l_height_22);
+        color: $specification-title;
+        margin-bottom: 30px;
+    }
+    &__desc {
+        @include fonts($f_size_14, $l_height_20);
+        color: $specification-desc;
+        max-width: 326px;
+        margin: 0 auto 30px;
+    }
+    &__price {
+        color: $main-color;
+        @include fonts($f_size_24, $l_height_31);
+    }
+    &-sorting {
+        justify-content: center;
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 57px 10px 24px;
+        margin: 65px auto 0;
+        cursor: pointer;
+        &__img {
+            fill: $main-color;
+            transition: $transition-speed;
+            margin-right: 20px;
+        }
+        &:hover {
+            .specification-btn__img {
+                fill: #fff;
+            }
+        }
+    }
+}
+
+.similar {
+    padding: 65px 0;
+    &__cards {
+        justify-self: center;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+    .product {
+        &-slider {
+            padding: 0;
+            &__img {
+                &-wrap {
+                    width: 466px;
+                }
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: 17%;
+    }
+    .specification {
+        &-about {
+            &__border {
+                width: 641px;
+            }
+        }
+        &__desc {
+            max-width: 555px
+        }
+        &-sorting {
+            margin-right: 90px;
+            &__title {
+                @include fonts($f_size_14, $l_height_17);
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .product {
+        &-slider {
+            height: 777px;
+            &__img {
+                &-wrap {
+                    width: 597px;
+                }
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev {
+        top: 20%;
+    }
+    .similar {
+        &__cards {
+            &:last-child {
+                display: block;
+            }
+        }
+    }
+}
+@media (min-width: 1440px) {
+    .specification {
+        &-wrap {
+            margin-top: -$slider-height-bottom;
+            border: 1px solid #EAEAEA;
+        }
+    }
+}
