@@ -1,0 +1,100 @@
+.header {
+    background-color: $bg-header;
+    position: relative;
+    &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $header-height;
+        padding: 8px 16px;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 44px;
+        margin-right: 40px;
+        transition: $transition-speed;
+        &:hover {
+            transform: scale(.95);
+        }
+    }
+    &__search {
+        width: 26px;
+        margin-top: 10px;
+        transition: $transition-speed;
+        &:hover {
+            transform: scale(.95);
+        }
+    }
+    &-icons {
+        display: none;
+    }
+}
+.hamburger {
+    transition: $transition-speed;
+    & .line {
+      width: 32px;
+      height: 3px;
+      background-color: #fff;
+      display: block;
+      margin: 8px auto;
+      transition: $transition-speed;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(.95);
+    }
+    &.is-active .line:nth-child(2) {
+      opacity: 0;
+    }
+    &.is-active .line:nth-child(1) {
+      transform: translateY(13px) rotate(45deg);
+    }
+    &.is-active .line:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+
+  @media (min-width: 768px) {
+      .header {
+          &-wrap {
+            padding: 20px 30px;
+          }
+          &__right {
+            display: flex;
+            align-items: center;
+          }
+          &-icons {
+            display: flex;
+            &__account {
+                margin-left: 26px;
+                transition: $transition-speed;
+                &:hover {
+                    transform: scale(.95);
+                }
+            }
+            &__cart {
+                margin-left: 40px;
+                &-link {
+                    position: relative;
+                    transition: $transition-speed;
+                    &:hover {
+                        transform: scale(.95);
+                    }
+                }
+                &-count {
+                    display: block;
+                    border-radius: 50%;
+                    background-color: $main-color;
+                    padding: 5px 10px;
+                    color: #fff;
+                    position: absolute;
+                    top: -15px;
+                    right: -15px;
+                }
+            }
+          }
+      }
+  }

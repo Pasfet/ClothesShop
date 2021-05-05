@@ -1,0 +1,42 @@
+.feature {
+    background-color: $bg-feature;
+    padding: 48px 0 80px;
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        &-wrap {
+            margin-bottom: 27px;
+        }
+    }
+    &-card {
+        text-align: center;
+        color: $feature-text;
+        max-width: 350px;
+        margin-bottom: 45px;
+        &__heading {
+            @include fonts($f_size_19, $l_height_24);
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        &__desc {
+            font-weight: 300;
+            @include fonts($f_size_14, $l_height_17);
+        }
+    }
+}
+@media (min-width: 768px) {
+    .feature {
+        padding: 48px 0 60px;
+    }
+}
+@media (min-width: 1024px) {
+    .feature {
+        &-wrap {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

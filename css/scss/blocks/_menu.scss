@@ -1,0 +1,99 @@
+.menu {
+    width: 232px;
+    background-color: #fff;
+    box-shadow: $shadow;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 16px 34px;
+    transform: translateZ(10px);
+    transform-origin: right;
+    transform: scaleX(0);
+    opacity: 0;
+    z-index: 10;
+    transition: $transition-speed;
+    &-close {
+        &__img {
+            width: 12px;
+            height: 12px;
+            align-self: flex-end;
+            cursor: pointer; 
+            transition: $transition-speed;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #000;
+        @include fonts($f_size_14, $l_height_17);
+        margin-bottom: 24px;
+
+    }
+    &-list {
+        margin-bottom: 20px;
+        &__title {
+            text-transform: uppercase;
+            font-weight: 400;
+            @include fonts($f_size_14, $l_height_17);
+            color: $main-color;
+            margin-bottom: 12px;
+        }
+        &__item {
+            text-transform: capitalize;
+            color: $menu-item;
+            @include fonts($f_size_14, $l_height_17);
+            margin-bottom: 11px;
+            margin-left: 20px;
+            transition: $transition-speed;
+            &:hover {
+                opacity: .8;
+                transform: scale(1.01);
+            }
+        }
+    }
+    &-active {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    &-icons {
+        &__nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &-img {
+            fill: #000;
+        }
+        &__cart {
+            &-link {
+                position: relative;
+            }
+            &-count {
+                display: block;
+                border-radius: 50%;
+                background-color: $main-color;
+                padding: 5px 10px;
+                color: #fff;
+                position: absolute;
+                top: -15px;
+                right: -15px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .menu {
+        height: calc(100vh - #{$header-height});
+        &-icons {
+            &__nav {
+                display: none;
+            }
+        }
+    }
+}

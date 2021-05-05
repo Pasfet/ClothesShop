@@ -1,0 +1,7 @@
+@mixin fonts($f_size, $l_height) {
+    font-size: $f_size;
+    line-height: $l_height;
+}
+@mixin btn ($padding_top, $padding_right, $padding_bottom, $padding_left) {
+    padding: $padding_top $padding_right $padding_bottom $padding_left;
+}

@@ -1,0 +1,76 @@
+.promo {
+    background-color: $bg-promo;
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 363px;
+    }
+
+    &-heading {
+        text-transform: uppercase;
+        @include fonts($f_size_20, $l_height_24);
+        font-weight: 700;
+        color: #222;
+        max-width: 270px;
+        padding-left: 15px;
+        border-left: 12px solid $main-color;
+
+        &_black {
+            @include fonts($f_size_38, $l_height_46);
+            font-weight: 900;
+        }
+
+        &_accent {
+            color: $main-color;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .promo {
+        height: calc(100vh - #{$header-height});
+
+        &-wrap {
+            height: 100%;
+            background-image: url('../img/promo/bg-promo.png');
+            background-repeat: no-repeat;
+            background-position: -200px bottom;
+            background-size: contain;
+            justify-content: flex-end;
+        }
+
+        &-heading {
+            max-width: 311px;
+            @include fonts($f_size_24, $l_height_29);
+
+            &_black {
+                @include fonts($f_size_44, $l_height_53);
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .promo {
+        &-wrap {
+            height: 100%;
+        }
+        &-heading {
+            margin-top: -60px;
+            margin-right: 100px;
+            max-width: 405px;
+            @include fonts($f_size_32, $l_height_38);
+
+            &_black {
+                @include fonts($f_size_48, $l_height_58);
+            }
+        }
+    }
+}
+@media (min-width: 2560px) {
+    .promo {
+        height: 764px;
+    }
+}

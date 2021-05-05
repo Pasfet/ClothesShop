@@ -1,0 +1,45 @@
+.main {
+    &-cards {
+        text-align: center;
+        &__heading {
+            @include fonts($f_size_30, $l_height_36);
+            color: #222;
+        }
+        &__text {
+            @include fonts($f_size_14, $l_height_17);
+            color: #9F9F9F;
+            margin-bottom: 65px;
+        }
+        &-wrap {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &_center {
+            justify-self: center;
+        }
+        &__btn {
+            display: inline-block;
+            margin: 40px 0 90px;
+            @include btn(15px, 39px, 15px, 39px);
+        }
+    }
+}
+@media (min-width: 768px) {
+    .main {
+        &-cards {
+            &-wrap {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .main {
+        &-cards {
+            &-wrap {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}

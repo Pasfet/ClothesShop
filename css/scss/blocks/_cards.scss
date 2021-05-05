@@ -1,0 +1,77 @@
+.card {
+    background-color: $bg-card;
+    max-width: 359px;
+    transition: $transition-speed;
+    &__img {
+        width: inherit;
+        display: block;
+        &-wrap {
+            max-width: 359px;
+            width: 100%;
+            position: relative;
+        }
+    }
+    &-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $card-overlay;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: $transition-speed;
+
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 1px solid #fff;
+        padding: 12px 16px 10px 14px;
+        color: #fff;
+        cursor: pointer;
+        @include fonts($f_size_14, $l_height_17);
+        transition: $transition-speed;
+        &__img {
+            margin-right: 10px;
+        }
+        &:hover {
+            transform: scale(.95);
+        }
+    }
+    &-content {
+        padding: 25px 16px 20px;
+        text-align: left;
+        width: 100%;
+        &__heading {
+            text-transform: uppercase;
+            color: #000;
+            @include fonts($f_size_13, $l_height_16);
+            margin-bottom: 12px;
+            &:hover {
+                text-decoration: underline
+            }
+        }
+        &__desc {
+            @include fonts($f_size_14, $l_height_17);
+            font-weight: 300;
+            color: #5D5D5D;
+            max-width: 313px;
+            margin-bottom: 18px;
+        }
+        &__price {
+            @include fonts($f_size_16, $l_height_19);
+            color: $main-color;
+        }
+    }
+    &:hover .card-overlay {
+        opacity: 1;
+    }
+    &:hover {
+        box-shadow: $shadow;
+        transform: scale(.99);
+    }
+}
