@@ -1,0 +1,12 @@
+.btn {
+    background-color: #fff;
+    color: $main-color;
+    border: 1px solid $main-color;
+    @include fonts($f_size_16, $l_height_19);
+    transition: $transition-speed;
+    &:hover {
+        transform: scale(.98);
+        color: #fff;
+        background-color: $main-color;
+    }
+}

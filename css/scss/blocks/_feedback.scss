@@ -1,0 +1,93 @@
+.feedback {
+    background-image: url('../img/feedback/bg-feedback.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -400px 0;
+    padding: 65px 0 110px;
+    &__img {
+        width: inherit;
+        &-wrap {
+            width: 91px;
+            height: 91px;
+            margin: 0 auto 30px;
+        }
+    }
+    &-left {
+        text-align: center;
+        margin-bottom: 60px;
+        &__text {
+            @include fonts($f_size_18, $l_height_22);
+            font-style: italic;
+            max-width: 343px;
+            margin: 0 auto;
+        }
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__heading {
+            color: #222224;
+            @include fonts($f_size_14, $l_height_36);
+            text-transform: uppercase;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 20px;
+            &_bold {
+                @include fonts($f_size_24, $l_height_36);
+                font-weight: 700;
+                display: block;
+            }
+        }
+    }
+    &-form {
+        display: flex;
+        &__input {
+            font-family: 'Lato', sans-serif;
+            background-color: #E1E1E1;
+            padding: 17px 20px;
+            @include fonts($f_size_14, $l_height_17);
+            color: #222224;
+            border: none;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            width: 245px;
+            &::placeholder {
+                opacity: .67;
+                font-family: 'Lato', sans-serif;
+                @include fonts($f_size_14, $l_height_17);
+            }
+        }
+        &__btn {
+            @include fonts($f_size_14, $l_height_17);
+            color: #fff;
+            background-color: $main-color;
+            border: none;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding: 17px;
+            cursor: pointer;
+            transition: $transition-speed;
+            &:hover {
+                background-color: #fff;
+                color: $main-color;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .feedback {
+        background-position: -325px 0;
+    }
+}
+@media (min-width: 1024px) {
+    .feedback {
+        background-position: center;
+        padding: 97px 0 126px;
+        &-wrap {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
